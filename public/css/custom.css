@@ -2,6 +2,11 @@ input, textarea, .uneditable-input {
   width: 330px;
 }
 
+table {
+  color: white;
+  font-size: 18px;
+}
+
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -50,7 +55,7 @@ input, textarea, .uneditable-input {
   background-image: url("../img/fussballfeld.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 550px;
+  min-height: 739px;
   padding: 5px;
   position: relative;
 }

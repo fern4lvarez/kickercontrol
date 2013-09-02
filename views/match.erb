@@ -2,37 +2,36 @@
 	@players = Player.uniq.pluck('name') 
 	@scores = [0,1,2,3,4,5,6,7,8,9,10]
 %>
-<h1>KickerControl</h1>
 <form method="post" action="/games">
-	<select name="post[team1backend]">
+	<select name="post[team1backend]" class="center">
 		<% @players.each do |player| %>
 			<option value=<%= player %>><%= player %></option>
 		<% end %>
-	</select>
-	<select name="post[team1frontend]">
+	</select><br>
+	<select name="post[team1frontend]" class="center">
 		<% @players.each do |player| %>
 			<option value=<%= player %>><%= player %></option>
 		<% end %>
-	</select>
-	<select name="post[team1score]">
+	</select><br>
+	<select name="post[team1score]" class="center">
 		<% @scores.each do |score| %>
 			<option value=<%= score %>><%= score %></option>
 		<% end %>
-	</select><br>
-	<select name="post[team2backend]">
+	</select><br><br>
+	<select name="post[team2backend]" class="center">
 		<% @players.each do |player| %>s
 			<option value=<%= player %>><%= player %></option>
 		<% end %>
-	</select>
-	<select name="post[team2frontend]">
+	</select><br>
+	<select name="post[team2frontend]" class="center">
 		<% @players.each do |player| %>
 			<option value=<%= player %>><%= player %></option>
 		<% end %>
-	</select>
-	<select name="post[team2score]">
+	</select><br>
+	<select name="post[team2score]" class="center">
 		<% @scores.each do |score| %>
 			<option value=<%= score %>><%= score %></option>
 		<% end %>
-	</select><br>
-	<input type="submit" value="Submit">
+	</select><br><br><br>
+	<input type="submit" value="Submit" class="btn btn-success btn-large btn-block">
 </form>
