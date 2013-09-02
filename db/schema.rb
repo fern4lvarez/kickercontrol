@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902090736) do
+ActiveRecord::Schema.define(version: 20130902121153) do
 
   create_table "games", force: true do |t|
     t.integer  "team1backend_id"
