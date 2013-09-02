@@ -1,0 +1,79 @@
+input, textarea, .uneditable-input {
+  width: 330px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.statheader{
+  font-size: 18px;
+  margin: 0px 15px 20px 15px;
+}
+.contentheading{
+  width: 212px;
+  margin: 0 auto 20px auto;
+}
+
+.field{
+  background-image: url("../img/fussballfeld.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 550px;
+  padding: 5px;
+  position: relative;
+}
+.fieldtitle {
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  color: #eeeeee;
+}
+.stick-bottom{
+  width: 350px;
+  position:absolute;
+  margin-left: -175px; /* very important for the button to be centered */
+  left:50%;
+  bottom:5px;
+}
+
+.center {
+  margin: 34px 55px;
+}
+.confirm {
+  margin-top: 200px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  color: #eeeeee;
+  font-size: 16px;
+
+}
