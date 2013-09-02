@@ -19,7 +19,12 @@ get "/" do
 	erb :match
 end
 
-post "/result" do
+get "/games/:id" do
+	@game = Game.find(params[:id])
+	erb :games
+end
+
+post "/games" do
 	@params = params[:post]
 	@team1backend = Player.where("name = ?", @params["team1backend"]).pluck("id").first
 	@team1frontend = Player.where("name = ?", @params["team1frontend"]).pluck("id").first
@@ -34,5 +39,5 @@ post "/result" do
 								:team1score => @params["team1score"],
 								:team2score => @params["team2score"]}
 								)
-	erb :result
+	erb :games
 end
