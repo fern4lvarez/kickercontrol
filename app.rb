@@ -45,5 +45,11 @@ post "/games" do
 								:team2score => @params["team2score"]}
 								)
 	@games = Game.all
+	@players = Game.all.uniq.joins(:name)
 	erb :games
+end
+
+get "/players" do
+	@players = Player.all
+	erb :players
 end

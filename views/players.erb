@@ -1,0 +1,15 @@
+<h1>Players</h1>
+<table border="1">
+	<tr>
+		<td>Picture</td>
+		<td>Name</td>
+		<td>Email</td>
+	</tr>
+<% @players.each do |player| %>
+	<tr>
+		<td><img src="<%= player.photo_url %>"></td>
+		<td><%= player.name %> <%= player.surname %></td>
+		<td><%= player.email %></td>
+	</tr>
+<% end %>
+</table>
