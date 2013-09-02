@@ -1,1 +1,26 @@
 <h1>Games</h1>
+<table border="1">
+	<tr>
+		<td>Date</td>
+		<td>Team 1 (B/F)</td>
+		<td>Team 2 (B/F)</td>
+		<td>Score</td>
+	</tr>
+<% @games.each do |game| %>
+<% 
+	team1backend_name = Player.where("id = ?", game.team1backend_id).pluck("name").first
+	team1frontend_name = Player.where("id = ?", game.team1frontend_id).pluck("name").first
+	team2backend_name = Player.where("id = ?", game.team2backend_id).pluck("name").first
+	team2frontend_name = Player.where("id = ?", game.team2frontend_id).pluck("name").first
+%>
+	<tr>
+		<td><%= game.created_at %></td>
+		<td><%= team1backend_name %>/<%= team1frontend_name %></td>
+		<td><%= team2backend_name %>/<%= team2frontend_name %></td>
+		<td><%= game.team1score %>-<%= game.team2score %></td>
+	</tr>
+<% end %>
+</table>
+
+<a href="/">Play Match</a>
+

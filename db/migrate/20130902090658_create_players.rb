@@ -2,7 +2,10 @@ class CreatePlayers < ActiveRecord::Migration
   def self.up
     create_table :players do |t|
       t.string :name
+      t.string :surname
       t.string :password
+      t.string :photo_url
+      t.string :email
       t.timestamps
     end
   end

@@ -19,8 +19,13 @@ get "/" do
 	erb :match
 end
 
+get "/games" do
+	@games = Game.all
+	erb :games
+end
+
 get "/games/:id" do
-	@game = Game.find(params[:id])
+	@games = Game.find(params[:id])
 	erb :games
 end
 
@@ -39,5 +44,6 @@ post "/games" do
 								:team1score => @params["team1score"],
 								:team2score => @params["team2score"]}
 								)
+	@games = Game.all
 	erb :games
 end
